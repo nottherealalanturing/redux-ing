@@ -1,3 +1,3 @@
-##Testing redux
+##Testing out redux
 
 tbc
