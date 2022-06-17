@@ -9,6 +9,10 @@ const increment = () => {
   return { type: 'increment' };
 };
 
+const incrementby = (value) => {
+  return { type: 'incrementby', payload: value };
+};
+
 const decrement = () => {
   return { type: 'decrement' };
 };
@@ -18,6 +22,8 @@ const counterReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'increment':
       return state + 1;
+    case 'incrementby':
+      return state + action.payload;
     case 'decrement':
       return state - 1;
     default:
